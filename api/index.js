@@ -32,8 +32,6 @@ app.get("/questions", (req, res) => {
     }
     const result = [];
 
-    console.log(results);
-
     results.forEach((item) => {
       const { questionId, question, optionId, option_text, correctOption } =
         item;
