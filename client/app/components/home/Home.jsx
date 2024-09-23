@@ -188,11 +188,11 @@ const Home = () => {
                 <button
                   key={idx}
                   className={`border border-gray-300 p-2 sm:p-4 rounded-lg text-md sm:text-lg font-semibold hover:bg-gray-100 ${
-                    selectedOption === option
+                    selectedOption === option.option_text
                       ? "bg-blue-100 border-blue-400"
                       : ""
                   }`}
-                  onClick={() => setSelectedOption(option_text)}
+                  onClick={() => setSelectedOption(option.option_text)}
                 >
                   {option.option_text}
                 </button>
