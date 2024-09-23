@@ -155,7 +155,9 @@ const Home = () => {
                 d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
               />
             </svg>
-            <p>Time Starts: {formatTime(time)}</p>
+            <p className="text-[14px] md:text-[16px]">
+              Time Starts: {formatTime(time)}
+            </p>
           </div>
           <button
             onClick={handleSubmit}
@@ -170,7 +172,7 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="mb-4 w-full sm:w-[500px] md:w-[600px] lg:w-[840px]">
+        <div className="mb-4 w-full sm:w-full md:w-full lg:w-full">
           <p className="text-lg font-semibold">
             Question {currentQuestion} of {totalQuestions}
           </p>
@@ -180,7 +182,7 @@ const Home = () => {
               Difficulty: {difficultyLevels[difficultyLevel]}
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full md:w-full lg:w-full">
             {options &&
               options.map((option, idx) => (
                 <button
@@ -216,11 +218,11 @@ const Home = () => {
             Prev
           </button>
 
-          <div className="space-x-2">
+          <div className="hidden md:flex space-x-2 w-[136px] md:w-[307px] h-[42px]">
             {Array.from({ length: totalQuestions }, (_, idx) => (
               <button
                 key={idx + 1}
-                className={`px-3 py-2 w-[37px] h-[42px] border border-gray-400 rounded-lg ${
+                className={`px-3 py-2 md:w-[37px] md:h-[42px] border border-gray-400 rounded-lg ${
                   currentQuestion === idx + 1
                     ? "bg-green-700 text-white"
                     : "bg-white"
@@ -258,7 +260,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-4 right-4 text-xs sm:text-sm text-black">
+      <div className="absolute bottom-4 right-[33px] text-xs sm:text-sm text-black">
         Made with &#10084; by Sanket Rathod
       </div>
     </div>
