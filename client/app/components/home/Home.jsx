@@ -110,11 +110,7 @@ const Home = () => {
     return <div>Loading questions...</div>;
   }
 
-
   const { question, options } = questions[currentQuestionIndex] || {};
-
-  // console.log(options)
-  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-100 to-blue-100 p-4 sm:p-8 flex items-center justify-center relative">
@@ -174,7 +170,7 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="mb-4 w-full sm:w-[500px] md:w-[600px] lg:w-[700px]">
+        <div className="mb-4 w-full sm:w-[500px] md:w-[600px] lg:w-[840px]">
           <p className="text-lg font-semibold">
             Question {currentQuestion} of {totalQuestions}
           </p>
@@ -224,7 +220,7 @@ const Home = () => {
             {Array.from({ length: totalQuestions }, (_, idx) => (
               <button
                 key={idx + 1}
-                className={`px-3 py-2 border border-gray-400 rounded-lg ${
+                className={`px-3 py-2 w-[37px] h-[42px] border border-gray-400 rounded-lg ${
                   currentQuestion === idx + 1
                     ? "bg-green-700 text-white"
                     : "bg-white"
